@@ -9,6 +9,7 @@ Step-by-step writeups for TryHackMe rooms and CTF challenges.
 | [Reverse Shells](reverse-shells.md) | Easy | Command injection, unrestricted file upload, PHP web shell |
 | [0day (Shellshock)](0day-shellshock.md) | Medium | Shellshock (CVE-2014-6271), OverlayFS privesc (CVE-2015-1328) |
 | [Anonforce](anonforce.md) | Easy | Anonymous FTP, PGP key cracking, shadow file decryption |
+| [Boiler CTF](boiler-ctf.md) | Medium | sar2HTML, credential leaks, SUID find privesc |
 
 ## About
 
