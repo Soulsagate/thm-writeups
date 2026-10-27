@@ -31,7 +31,7 @@ boxes like these: one command scans the box, checks every service it finds, and 
 ranked "Where to start" list of what to try first and the exact command for it.
 
 ```bash
-pipx install git+https://github.com/Soulsagate/soul-toolkit
+pipx install soul-toolkit
 sudo "$(which toolkit)" recon 10.10.42.17 --writeup --room "Room Name"
 ```
 
