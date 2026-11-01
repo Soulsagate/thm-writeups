@@ -17,6 +17,7 @@ and why the path that worked did.
 | [Anonforce](anonforce.md) | Easy | Anonymous FTP, PGP key cracking, shadow file decryption |
 | [Fowsniff Corp](fowsniff.md) | Easy | OSINT credential dump, MD5 cracking, POP3 brute force, MOTD privesc |
 | [Boiler CTF](boiler-ctf.md) | Medium | sar2HTML, credential leaks, SUID find privesc |
+| [Critical Condition](critical-condition.md) | Medium | Sigma rules, Splunk/SPL, DCSync, SMBexec, T1490, T1569.002 |
 
 ## Reading the commands
 
