@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://tryhackme.com/p/S0uls"><img src="https://img.shields.io/badge/TryHackMe-S0uls-c8a24a?style=for-the-badge&logo=tryhackme&logoColor=white&labelColor=20242e" alt="TryHackMe profile" /></a>
-  <img src="https://img.shields.io/badge/Writeups-7-20242e?style=for-the-badge" alt="7 writeups" />
+  <img src="https://img.shields.io/badge/Writeups-8-20242e?style=for-the-badge" alt="8 writeups" />
 </p>
 
 Step-by-step writeups for TryHackMe rooms and CTF challenges: what I tried, what was a dead end,
@@ -19,6 +19,7 @@ and why the path that worked did.
 | [Boiler CTF](boiler-ctf.md) | Medium | sar2HTML, credential leaks, SUID find privesc |
 | [Critical Condition](critical-condition.md) | Medium | Sigma rules, Splunk/SPL, DCSync, SMBexec, T1490, T1569.002 |
 | [Insecure Inter-Agent Communication](agentic-cascade.md) | Medium | Agentic AI, stored template injection, memory poisoning, sender spoofing |
+| [Proxy Meeting](proxy-meeting.md) | Easy | AI assistant abuse, confused deputy, indirect prompt injection |
 
 ## Reading the commands
 
