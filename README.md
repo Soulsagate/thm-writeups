@@ -21,7 +21,7 @@ and why the path that worked did.
 | [Insecure Inter-Agent Communication](agentic-cascade.md) | Medium | Agentic AI, stored template injection, memory poisoning, sender spoofing |
 | [Proxy Meeting](proxy-meeting.md) | Easy | AI assistant abuse, confused deputy, indirect prompt injection |
 | [Off the Brief](off-the-brief.md) | Medium | Indirect prompt injection, OWASP ASI01, agent exfiltration, guest-account abuse |
-| [NahamStore](nahamstore.md) *(in progress)* | Hard | Subdomain enum, XSS, CSRF, IDOR, SSRF, SQLi — full-scope web pentest |
+| [NahamStore](nahamstore.md) | Hard | Full-scope web pentest: XSS, CSRF, IDOR, LFI, SSRF, XXE, RCE, SQLi |
 
 ## Reading the commands
 
