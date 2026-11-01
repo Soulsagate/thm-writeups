@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://tryhackme.com/p/S0uls"><img src="https://img.shields.io/badge/TryHackMe-S0uls-c8a24a?style=for-the-badge&logo=tryhackme&logoColor=white&labelColor=20242e" alt="TryHackMe profile" /></a>
-  <img src="https://img.shields.io/badge/Writeups-9-20242e?style=for-the-badge" alt="9 writeups" />
+  <img src="https://img.shields.io/badge/Writeups-10-20242e?style=for-the-badge" alt="10 writeups" />
 </p>
 
 Step-by-step writeups for TryHackMe rooms and CTF challenges: what I tried, what was a dead end,
@@ -21,6 +21,7 @@ and why the path that worked did.
 | [Insecure Inter-Agent Communication](agentic-cascade.md) | Medium | Agentic AI, stored template injection, memory poisoning, sender spoofing |
 | [Proxy Meeting](proxy-meeting.md) | Easy | AI assistant abuse, confused deputy, indirect prompt injection |
 | [Off the Brief](off-the-brief.md) | Medium | Indirect prompt injection, OWASP ASI01, agent exfiltration, guest-account abuse |
+| [NahamStore](nahamstore.md) *(in progress)* | Hard | Subdomain enum, XSS, CSRF, IDOR, SSRF, SQLi — full-scope web pentest |
 
 ## Reading the commands
 
