@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://tryhackme.com/p/S0uls"><img src="https://img.shields.io/badge/TryHackMe-S0uls-c8a24a?style=for-the-badge&logo=tryhackme&logoColor=white&labelColor=20242e" alt="TryHackMe profile" /></a>
-  <img src="https://img.shields.io/badge/Writeups-5-20242e?style=for-the-badge" alt="5 writeups" />
+  <img src="https://img.shields.io/badge/Writeups-7-20242e?style=for-the-badge" alt="7 writeups" />
 </p>
 
 Step-by-step writeups for TryHackMe rooms and CTF challenges: what I tried, what was a dead end,
@@ -18,6 +18,7 @@ and why the path that worked did.
 | [Fowsniff Corp](fowsniff.md) | Easy | OSINT credential dump, MD5 cracking, POP3 brute force, MOTD privesc |
 | [Boiler CTF](boiler-ctf.md) | Medium | sar2HTML, credential leaks, SUID find privesc |
 | [Critical Condition](critical-condition.md) | Medium | Sigma rules, Splunk/SPL, DCSync, SMBexec, T1490, T1569.002 |
+| [Insecure Inter-Agent Communication](agentic-cascade.md) | Medium | Agentic AI, stored template injection, memory poisoning, sender spoofing |
 
 ## Reading the commands
 
