@@ -167,6 +167,23 @@ Returns `q` and `r`. The same sweep on the product page returns `discount`, `id`
 discount="><script>alert(1)</script>
 ```
 
+### Marketing subdomain — the `error` parameter
+
+The answer to "enter a URL (including parameters) of an endpoint vulnerable to XSS" is not on the main host. The marketing root takes an undocumented `error` parameter and reflects it:
+
+```bash
+ffuf -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt \
+  -u 'http://marketing.nahamstore.thm/?FUZZ=soultest123' -mr soultest123 -t 50
+```
+
+```
+error    [Status: 200, Size: 2179, Words: 751, Lines: 45]
+```
+
+**URL: `http://marketing.nahamstore.thm/?error=`**
+
+Easy to miss twice over: the subdomain is never linked from the main site's XSS surface, and in ffuf output a hit literally named `error` reads like a tool failure rather than a result.
+
 ### Stored XSS — HTTP header
 
 The order detail page renders the `User-Agent` of the request that placed the order:
@@ -556,7 +573,7 @@ Note the first injection point cannot reach this table — `--tables` through `/
 | Question | Answer |
 |---|---|
 | Jimmy Jones SSN | `521-61-6392` |
-| XSS — vulnerable URL | `http://nahamstore.thm/product?id=1&name=` |
+| XSS — vulnerable URL | `http://marketing.nahamstore.thm/?error=` |
 | XSS — stored via HTTP header | `User-Agent` |
 | XSS — product page tag | `title` |
 | XSS — JavaScript variable | `search` |
@@ -599,6 +616,15 @@ Note the first injection point cannot reach this table — `--tables` through `/
 **Published writeups drift from the deployed instance.** The reference writeup named `internal-api.nahamstore.thm`; the live host is `internal-api.nahamstore.com`. Enumerating the Docker network from inside took two minutes and gave the real answer.
 
 **`$path` is a tied array in zsh.** A loop written `for path in ...` silently destroys `PATH`, and the shell starts reporting `command not found` for `curl` and `grep` several commands later. Use any other variable name.
+
+**The answer format is a hint — count it.** I guessed at the XSS URL twice and missed. Counting the mask precisely gave `http` `://` `[9]` `.` `[10]` `.` `[3]` `/` `[7]`, which rules out the apex entirely (one dot) and pins the subdomain to the only 9-character one, `marketing`. Seven characters after the slash is query-shaped, not a directory — `?error=` fits exactly. Where the format is rendered as an image, cropping and upscaling it beats squinting:
+
+```bash
+python3 -c "
+from PIL import Image
+im = Image.open('fmt.png')
+im.crop((118,46,360,70)).resize((242*9,24*9), Image.NEAREST).save('zoom.png')"
+```
 
 **Check what's installed before assuming a command failed.** Several network probes from the marketing container returned empty because `curl` and `wget` aren't present. `php -r 'file_get_contents(...)'` worked immediately and found the internal API.
 
