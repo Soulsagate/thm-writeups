@@ -20,8 +20,9 @@ Two web ports. Port 80 is a static landing page; port 8080 is locked behind Basi
 **Q: Port without authentication → `80`**
 **Q: Port with Basic Auth → `8080`**
 **Q: File that reveals the backend → `phpinfo.php`**
+**Q: Apache version → `2.4.29`**
 
-> Note on the Apache version question: the live box served **2.4.41**, but the room's answer key was written against the original VM (Ubuntu 18.04, Apache **2.4.29**). If `2.4.41` is rejected, that mismatch is why.
+> Gotcha: the redeployed box's `Server` header and `nmap -sV` both report **2.4.41**, but the accepted answer is **2.4.29** — the room's key was written against the original VM (Ubuntu 18.04). If `2.4.41` is rejected, this mismatch is why; answer `2.4.29`.
 
 ---
 
