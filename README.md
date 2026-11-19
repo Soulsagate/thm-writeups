@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://tryhackme.com/p/S0uls"><img src="https://img.shields.io/badge/TryHackMe-S0uls-c8a24a?style=for-the-badge&logo=tryhackme&logoColor=white&labelColor=20242e" alt="TryHackMe profile" /></a>
-  <img src="https://img.shields.io/badge/Writeups-12-20242e?style=for-the-badge" alt="12 writeups" />
+  <img src="https://img.shields.io/badge/Writeups-13-20242e?style=for-the-badge" alt="13 writeups" />
 </p>
 
 Step-by-step writeups for TryHackMe rooms and CTF challenges: what I tried, what was a dead end,
@@ -24,6 +24,7 @@ and why the path that worked did.
 | [NahamStore](nahamstore.md) | Hard | Full-scope web pentest: XSS, CSRF, IDOR, LFI, SSRF, XXE, RCE, SQLi |
 | [Snort Challenge: Live Attacks](snort-live-attacks.md) | Easy | Snort IPS mode, inline drop rules, SSH brute-force, reverse shell |
 | [One Piece](one-piece.md) | Medium | FTP dotfiles, multi-stage encoding, steghide, SUID Python, append-only privesc |
+| [HA: Joker](ha-joker.md) | Medium | Joomla, HTTP Basic Auth brute force, zip/bcrypt cracking, template RCE, lxd group privesc |
 
 ## Reading the commands
 
